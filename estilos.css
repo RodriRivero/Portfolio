@@ -193,6 +193,20 @@ text-align: center;
     color: #fff;
     border: green;
 }
+/*SERVICIOS*/
 
+#servicios{
+    padding: 100px 15px;
+    text-align: center;
+    background-color: #f3f3f3;          
+}
+#servicios .titulo-seccion{
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
 
 
