@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="estilos.css">
@@ -26,7 +26,7 @@
                         </ul>
                     </nav>
                     <!-- ICONOS DE MENU RESPONSIVE -->
-                    <div id="icono-nav">
+                    <div id="icono-nav" onclick="responsiveMenu()">
                         <i class="fa-solid fa-bars-staggered"></i>          
                     </div>
                     <!-- ICONOS DE LAS REDES SOCIALES -->
@@ -64,7 +64,7 @@
         </div>
     </section>
 
-    <!--CONOS -->
+    <!--CONOC -->
     <section id="servicios">
         <h3 class="titulo-seccion"> MIS SERVICIOS</h3>
         <div class="fila">
@@ -138,5 +138,163 @@
             </div>
         </div>
     </section>
+
+    <!-- HABILIDADES  -->
+    <div class="contenedor-skills" id="skills">
+        <h3>HABILIDADES</h3>
+        <div class="skills">
+            <div class="info">
+                <p><span class="lista"></span>Phothoshop</p>
+                <span class="porcentaje">90%</span>
+            </div>
+            <div class="barra">
+                <div id="html" class=""></div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="info">
+                <p><span class="lista"></span>html & Css</p>
+                <span class="porcentaje">95%</span>
+            </div>
+            <div class="barra">
+                <div id="html"></div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="info">
+                <p><span class="lista"></span>Javascript</p>
+                <span class="porcentaje">90%</span>
+            </div>
+            <div class="barra">
+                <div id="html"></div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="info">
+                <p><span class="lista"></span>Git Hub</p>
+                <span class="porcentaje">95%</span>
+            </div>
+            <div class="barra">
+                <div id="html"></div>
+            </div>
+        </div>
+        
+    </div>
+
+<!--PORTAFOLIO  -->
+<section id="portfolio">
+    <h3 class="titulo-seccion">MIS PROYECTOS</h3>   
+    <div class="fila">
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+        </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+            </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+            </div>
+        </div>
+    </div>
+    <div class="fila">
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+        </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+            </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+            </div>
+        </div>
+    </div>
+    <div class="fila">
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+        </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+            </div>
+        </div>
+        <div class="proyecto">
+            <div class="overlay"></div>
+        <img src="desigpng.png" alt="">
+        <div class="info">
+            <h4>descripcion del proyecto</h4>
+            <p>diseño Web</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<!-- contacto   -->
+<section id="contacto">
+    <h3 class="titulo-seccion">Contactame</h3>  
+    <div class="contenedor-form">
+        <form action="">
+            <div class="fila mitad">
+                <input type="text" placeholder="Nombre" class="input-mitad">
+                <input type="text" placeholder="Mail" class="input-mitad">
+            </div>
+            <div class="fila">
+                <input type="text" placeholder="Asunto" class="input-full">
+            </div>
+            <div class="fila">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje" class="input-full"></textarea>
+            </div>
+            <input type="submit" value="Enviar" class="btn-enviar">
+        </form>
+    </div>
+</section>
+<!-- footer -->
+<footer>
+    <p>derechos de autor Rodridev- 2023</p>
+    <div class="redes">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
+
 </html>

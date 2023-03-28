@@ -253,3 +253,293 @@ text-align: center;
     font-size: 14px;
     line-height: 22px;
 }
+/* HABILIDADES*/
+
+.contenedor-skills{
+    background: linear-gradient(rgba(7, 246, 246, 0.623) , rgba(33,16,16,8)), url("");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0;
+    text-align: center;
+}
+.contenedor-skills .skills {
+    max-width:  600px;
+    margin: 30px auto;
+}
+
+.contenedor-skills .skills .info {
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor-skills .skills .lista {
+    display: inline-block;
+    margin-right: 20px;
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+}
+.contenedor-skills .skills .barra {
+    background-color: #91919191;
+    width: 100%;
+    height: 6px;
+    margin: 10px 0;
+}
+
+
+/* para javascript*/
+.contenedor-skills .skills .barra .barra-progreso1 {
+    background-color: #fff;
+    width: 90%;
+    height: 6px;
+    animation: progreso1 2s forwards;
+
+}
+.contenedor-skills .skills .barra .barra-progreso2 {
+    background-color: #fff;
+    width: 95%;
+    height: 6px;
+    animation: progreso2 2s forwards;
+
+}
+.contenedor-skills .skills .barra .barra-progreso3 {
+    background-color: #fff;
+    width: 90%;
+    height: 6px;
+    animation: progreso3 2s forwards;
+
+}
+.contenedor-skills .skills .barra .barra-progreso4 {
+    background-color: #fff;
+    width: 95%;
+    height: 6px;
+    animation: progreso4 2s forwards;
+
+}
+/* animaciones barras  */
+@keyframes  progreso1 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes  progreso2 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 9%;
+    }
+}
+
+@keyframes  progreso3 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 95%;
+    }
+}
+
+@keyframes  progreso4 {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+/* PORTFOLIO*/
+#portfolio {
+    max-width: 1100px;
+    padding: 100px 0;
+    margin: auto;
+}
+#portfolio .titulo-seccion {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #111135;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;             
+}
+#portfolio .fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+#portfolio .fila .proyecto {
+    max-width: 450px;
+    border: 1px solid #000;
+    margin:  0 10px;
+    position:relative;
+    overflow: hidden;
+}
+
+#portfolio .fila .proyecto img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: .5s;
+}
+#portfolio .fila .proyecto:hover img{
+    filter: grayscale(0);
+}
+
+#portfolio .fila .proyecto .info {
+    position: absolute;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    color: rgba(13, 183, 226, 0.46);
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    bottom: -40px;
+    transition: .5s;
+}
+
+#portfolio .fila .proyecto:hover .info {
+    opacity: 1;
+    bottom: 0;
+}
+
+/*CONTACTO*/
+#contacto{
+    padding: 100px 15px;
+}
+#contacto .titulo-seccion {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #01090b;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+}
+#contacto .contenedor-form{
+    max-width: 1100px;
+    margin: auto;
+}
+#contacto .contenedor-form .fila{
+    margin-bottom: 15px;
+}
+#contacto .contenedor-form .mitad {
+    display: flex;
+    justify-content: space-between;
+}
+#contacto .contenedor-form input,
+#contacto .contenedor-form textarea {
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    border: 1px solid #91919191;
+}
+
+#contacto .contenedor-form .mitad input {
+    width: 48%;
+}
+#contacto .contenedor-form .input-full {
+    width: 100%;
+}
+#contacto .btn-enviar {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: .4s;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#contacto .btn-enviar:hover {
+    background-color: rgba(38, 172, 172, 0.273);
+    color: #f8f4f4;
+
+}
+footer{
+    background-color:  #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 5px;
+    font-size: 26px;
+
+}
+
+/*resposive*/
+
+@media screen and (max-width: 800px){
+    .redes {
+        display: none; 
+    }
+    nav {
+        display: none;
+    }
+    nav.resposive{
+        display: block;
+        background-color: rgba(0,0,0,.8);
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        padding: 10px 0;
+    }
+    nav.responsive ul{
+        display: block !important;
+        text-align: center;
+    }
+    nav.responsive ul li{
+        margin: 5px 0;
+    }
+    
+    #icono-nav{
+        display: block;
+    }
+    #inicio .contenido .presentacion h2{
+        font-size: 40px;
+    }
+    #sobremi{
+        padding: 50px;
+        display: block;
+    }
+    #sobremi .contenedor-foto{
+        max-width: 200px;
+        margin: auto;
+    }
+    #sobremi .contenedor-foto img {
+        padding: 8px;
+    }
+    #sobremi .sobremi .titulo-seccion{
+        text-align: center;
+    }
+    #sobremi .sobremi h2{
+        font-size:  25px;
+        text-align: center;
+    }
+    #servicios{
+        padding:  50px 15px;
+    }
+    #servicios .fila {
+        display: block;
+    }
+    #servicios .fila .servicio {
+        margin: 10px auto;
+    }
+    .contenedor-skills {
+        padding: 50px 20px;
+    }
+    #portfolio{
+        padding: 50px;
+    }
+    }
