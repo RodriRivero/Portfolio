@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="estilos.css">
@@ -18,17 +18,19 @@
                     <h1>  > Rodridev < </h1>   
                     <nav id="nav" class="">
                         <ul id="links">
-                            <li><a href="#inicio" class="seleccionado">INICIO</a></li>
-                            <li><a href="#sobremi">SOBRE MI</a></li>
-                            <li><a href="#servicios">TEGNOLOGIAS</a></li>
-                            <li><a href="#portfolio">PORTFOLIO</a></li>
-                            <li><a href="#contacto">CONTACTO</a></li>
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
                         </ul>
                     </nav>
-                    <!-- ICONOS DE MENU RESPONSIVE -->
+
+                    <!-- Icono del menu responsive -->
                     <div id="icono-nav" onclick="responsiveMenu()">
-                        <i class="fa-solid fa-bars-staggered"></i>          
+                        <i class="fa-solid fa-bars"></i>
                     </div>
+
                     <!-- ICONOS DE LAS REDES SOCIALES -->
                     <div class="redes">
                         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -58,8 +60,8 @@
             <p class="titulo-seccion">Sobre Mi</p>
             <h2>Hola, soy <span>Rodrigo Rivero</span></h2>
             <h3>Desarrollador Web Jr</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorem laborum enim culpa officiis error libero, eaque, nostrum eos soluta harum doloremque</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisici</p>
+            <p>Soy un desarrollador Front end,Estoy estudiando la Carrera Full Stack en Coderhouse ,curso la etapa final este año,aprediendo el Backend de la programacion.</p>
+            <p>Dejo aqui abajo mi Cv para descargar.</p>
             <a href="#"> Descargar CV</a>
         </div>
     </section>
@@ -257,8 +259,8 @@
             <div class="overlay"></div>
         <img src="desigpng.png" alt="">
         <div class="info">
-            <h4>descripcion del proyecto</h4>
-            <p>diseño Web</p>
+            <h4>Descripcion del proyecto</h4>
+            <p>Diseño Web</p>
             </div>
         </div>
     </div>
@@ -285,7 +287,7 @@
 </section>
 <!-- footer -->
 <footer>
-    <p>derechos de autor Rodridev- 2023</p>
+    <p>Derechos de Rodridev - 2023</p>
     <div class="redes">
         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                         <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -295,6 +297,7 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 
 </html>
