@@ -289,6 +289,29 @@ text-align: center;
     margin: 10px 0;
 }
 
+/* ************************************************* */
+/* estilo para el mensaje emergente */
+.mensaje-enviado {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  padding-top: 50px;
+}
+
+/* estilo para el mensaje emergente después de que se muestre */
+.mensaje-enviado.mostrado {
+  display: block;
+}
+/* ************************************************* */
+
 
 /* para javascript*/
 .contenedor-skills .skills .barra .barra-progreso1 {
