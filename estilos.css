@@ -389,7 +389,19 @@ text-align: center;
     object-fit: cover;
     transition: .5s;
 }
-#portfolio .fila .proyecto .overlay1 img {
+#portfolio .fila .proyecto1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+#portfolio .fila .proyecto2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+#portfolio .fila .proyecto3 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
