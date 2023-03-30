@@ -74,28 +74,42 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
     document.querySelector(".mensaje-enviado").classList.remove("mostrado");
   }, 3000);
 });
-
 const formulario = document.getElementById('formulario-contacto');
 const nombre = document.getElementById('nombre');
 const correo = document.getElementById('correo');
 const asunto = document.getElementById('asunto');
 const mensaje = document.getElementById('mensaje');
 const mensajeEnviado = document.querySelector('.mensaje-enviado');
+const mensajeExito = document.querySelector('.mensaje-exito');
 
 formulario.addEventListener('submit', (e) => {
   e.preventDefault();
   
-  if (nombre.value.trim() === '' || correo.value.trim() === '' || asunto.value.trim() === '' || mensaje.value.trim() === '') {
-    alert('Por favor, complete todos los campos antes de enviar el mensaje.');
-    return;
+  if (nombre.value !== '' && correo.value !== '' && mensaje.value !== '') {
+    // Deshabilitar el formulario para que no se puedan enviar más mensajes
+    formulario.style.pointerEvents = 'none';
+    formulario.style.opacity = '0.5';
+    
+    // Mostrar el mensaje de envío
+    mensajeEnviado.classList.add('mostrado');
+    
+    // Ocultar el mensaje de éxito si estaba visible
+    mensajeExito.classList.remove('mostrado');
+    
+    // Esperar 3 segundos y luego mostrar el mensaje de éxito
+    setTimeout(() => {
+      mensajeEnviado.classList.remove('mostrado');
+      mensajeExito.classList.add('mostrado');
+      
+      // Habilitar el formulario y borrar los campos después de mostrar el mensaje de éxito
+      formulario.style.pointerEvents = 'auto';
+      formulario.style.opacity = '1';
+      nombre.value = '';
+      correo.value = '';
+      asunto.value = '';
+      mensaje.value = '';
+    }, 3000);
   }
-  
-  // aquí puedes agregar el código para enviar el mensaje
-  // por ejemplo, mostrar el mensaje de éxito y limpiar los campos del formulario
-  mensajeEnviado.classList.add('mostrado');
-  nombre.value = '';
-  correo.value = '';
-  asunto.value = '';
-  mensaje.value = '';
 });
+
 
