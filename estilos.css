@@ -489,6 +489,9 @@ footer a {
 
 @media screen and (max-width: 800px) {
     .redes {
+        display: none; 
+     }
+        .redesbot {
         display: inline-block;
         margin-bottom: -10px;  
      }
