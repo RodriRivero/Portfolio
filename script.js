@@ -74,3 +74,28 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
     document.querySelector(".mensaje-enviado").classList.remove("mostrado");
   }, 3000);
 });
+
+const formulario = document.getElementById('formulario-contacto');
+const nombre = document.getElementById('nombre');
+const correo = document.getElementById('correo');
+const asunto = document.getElementById('asunto');
+const mensaje = document.getElementById('mensaje');
+const mensajeEnviado = document.querySelector('.mensaje-enviado');
+
+formulario.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  if (nombre.value.trim() === '' || correo.value.trim() === '' || asunto.value.trim() === '' || mensaje.value.trim() === '') {
+    alert('Por favor, complete todos los campos antes de enviar el mensaje.');
+    return;
+  }
+  
+  // aquí puedes agregar el código para enviar el mensaje
+  // por ejemplo, mostrar el mensaje de éxito y limpiar los campos del formulario
+  mensajeEnviado.classList.add('mostrado');
+  nombre.value = '';
+  correo.value = '';
+  asunto.value = '';
+  mensaje.value = '';
+});
+
