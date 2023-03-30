@@ -65,6 +65,12 @@ document.getElementById("formulario-contacto").addEventListener("submit", functi
   // (en este ejemplo, simplemente mostramos los datos en la consola)
   console.log(datos);
 
-  // reiniciar el formulario
-  document.getElementById("formulario-contacto").reset();
+  // mostrar el mensaje emergente
+  document.querySelector(".mensaje-enviado").classList.add("mostrado");
+
+  // reiniciar el formulario después de 3 segundos
+  setTimeout(function() {
+    document.getElementById("formulario-contacto").reset();
+    document.querySelector(".mensaje-enviado").classList.remove("mostrado");
+  }, 3000);
 });
