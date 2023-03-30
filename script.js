@@ -39,3 +39,32 @@ function efectoHabilidades() {
     }
 
 }
+
+// selecciona el formulario y agrega un evento de escucha submit
+document.getElementById("formulario-contacto").addEventListener("submit", function(event){
+  event.preventDefault(); // previene que el formulario se envíe de forma predeterminada
+
+  // obtener los valores de los campos del formulario
+  var nombre = document.getElementById("nombre").value;
+  var correo = document.getElementById("correo").value;
+  var asunto = document.getElementById("asunto").value;
+  var mensaje = document.getElementById("mensaje").value;
+
+  // validar los campos del formulario (ejemplo: el campo del correo electrónico debe tener un formato válido)
+  // ...
+
+  // crear un objeto con los datos del formulario
+  var datos = {
+    nombre: nombre,
+    correo: correo,
+    asunto: asunto,
+    mensaje: mensaje
+  };
+
+  // enviar los datos del formulario a un servidor o guardarlos en una base de datos
+  // (en este ejemplo, simplemente mostramos los datos en la consola)
+  console.log(datos);
+
+  // reiniciar el formulario
+  document.getElementById("formulario-contacto").reset();
+});
