@@ -39,77 +39,50 @@ function efectoHabilidades() {
     }
 
 }
+const form = document.querySelector('#formulario-contacto');
+const nombre = document.querySelector('#nombre');
+const correo = document.querySelector('#correo');
+const asunto = document.querySelector('#asunto');
+const mensaje = document.querySelector('#mensaje');
+const btnEnviar = document.querySelector('.btn-enviar');
 
-// selecciona el formulario y agrega un evento de escucha submit
-document.getElementById("formulario-contacto").addEventListener("submit", function(event){
-  event.preventDefault(); // previene que el formulario se envíe de forma predeterminada
+// Agregar listener al botón de enviar
+btnEnviar.addEventListener('click', enviarFormulario);
 
-  // obtener los valores de los campos del formulario
-  var nombre = document.getElementById("nombre").value;
-  var correo = document.getElementById("correo").value;
-  var asunto = document.getElementById("asunto").value;
-  var mensaje = document.getElementById("mensaje").value;
-
-  // validar los campos del formulario (ejemplo: el campo del correo electrónico debe tener un formato válido)
-  // ...
-
-  // crear un objeto con los datos del formulario
-  var datos = {
-    nombre: nombre,
-    correo: correo,
-    asunto: asunto,
-    mensaje: mensaje
-  };
-
-  // enviar los datos del formulario a un servidor o guardarlos en una base de datos
-  // (en este ejemplo, simplemente mostramos los datos en la consola)
-  console.log(datos);
-
-  // mostrar el mensaje emergente
-  document.querySelector(".mensaje-enviado").classList.add("mostrado");
-
-  // reiniciar el formulario después de 3 segundos
-  setTimeout(function() {
-    document.getElementById("formulario-contacto").reset();
-    document.querySelector(".mensaje-enviado").classList.remove("mostrado");
-  }, 3000);
-});
-const formulario = document.getElementById('formulario-contacto');
-const nombre = document.getElementById('nombre');
-const correo = document.getElementById('correo');
-const asunto = document.getElementById('asunto');
-const mensaje = document.getElementById('mensaje');
-const mensajeEnviado = document.querySelector('.mensaje-enviado');
-const mensajeExito = document.querySelector('.mensaje-exito');
-
-formulario.addEventListener('submit', (e) => {
-  e.preventDefault();
+// Función para enviar el formulario
+function enviarFormulario(event) {
+  event.preventDefault();
   
-  if (nombre.value !== '' && correo.value !== '' && mensaje.value !== '') {
-    // Deshabilitar el formulario para que no se puedan enviar más mensajes
-    formulario.style.pointerEvents = 'none';
-    formulario.style.opacity = '0.5';
-    
-    // Mostrar el mensaje de envío
-    mensajeEnviado.classList.add('mostrado');
-    
-    // Ocultar el mensaje de éxito si estaba visible
-    mensajeExito.classList.remove('mostrado');
-    
-    // Esperar 3 segundos y luego mostrar el mensaje de éxito
-    setTimeout(() => {
-      mensajeEnviado.classList.remove('mostrado');
-      mensajeExito.classList.add('mostrado');
-      
-      // Habilitar el formulario y borrar los campos después de mostrar el mensaje de éxito
-      formulario.style.pointerEvents = 'auto';
-      formulario.style.opacity = '1';
-      nombre.value = '';
-      correo.value = '';
-      asunto.value = '';
-      mensaje.value = '';
-    }, 3000);
+  // Verificar que todos los campos estén llenos
+  if (nombre.value === '' || correo.value === '' || asunto.value === '' || mensaje.value === '') {
+    mostrarAlerta('Llenar todos los campos por favor', 'error');
+    return;
   }
-});
+
+  // Mostrar mensaje de éxito
+  mostrarAlerta('Mensaje enviado', 'exito');
+
+  // Limpiar campos del formulario después de 3 segundos
+  setTimeout(() => {
+    form.reset();
+  }, 3000);
+}
+
+// Función para mostrar alertas
+function mostrarAlerta(mensaje, tipo) {
+  const alerta = document.createElement('div');
+  alerta.textContent = mensaje;
+  alerta.classList.add('alerta', `alerta-${tipo}`);
+
+  // Insertar alerta en el DOM
+  form.insertBefore(alerta, form.lastElementChild);
+
+  // Ocultar alerta después de 3 segundos
+  setTimeout(() => {
+    alerta.remove();
+  }, 3000);
+}
+
+
 
 
