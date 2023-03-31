@@ -258,9 +258,9 @@ text-align: center;
 /* HABILIDADES*/
 
 .contenedor-skills{
-    background: linear-gradient(rgba(7, 246, 246, 0.623) , rgba(33,16,16,8)), url("");
+    background: linear-gradient(rgba(7, 246, 246, 0.623) , rgba(33,16,16,8)), url("img/in\ perfil.png");
     background-attachment:fixed;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center center;
     padding: 100px 0;
@@ -652,6 +652,16 @@ footer a {
     /* seccion HABLIDADES MI */
     .contenedor-skills {
         padding: 50px 20px;
+    }
+    .contenedor-skills{
+        background: linear-gradient(rgba(7, 246, 246, 0.623) , rgba(33,16,16,8)), url("img/in\ perfil.png");
+        background-attachment:fixed;
+        background-repeat: inherit;
+        background-size: contain;
+        background-position: center;
+        padding: 100px 0;
+        text-align: center;
+
     }
     /* seccion PORTFOLIO */
     #portfolio {
