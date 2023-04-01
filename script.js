@@ -39,7 +39,16 @@ function efectoHabilidades() {
     }
 
 }
-const form = document.querySelector('#formulario-contacto');
+
+
+
+
+
+
+
+
+
+/*const form = document.querySelector('#formulario-contacto');
 const nombre = document.querySelector('#nombre');
 const correo = document.querySelector('#correo');
 const asunto = document.querySelector('#asunto');
@@ -81,8 +90,33 @@ function mostrarAlerta(mensaje, tipo) {
   setTimeout(() => {
     alerta.remove();
   }, 3000);
-}
+}*/
 
 
+
+
+const btn = document.getElementById('button');
+
+    document.getElementById('formulario-contacto')
+     .addEventListener('submit', function(event) {
+       event.preventDefault();
+       
+    
+       btn.value = 'Enviando...';
+    
+       const serviceID = 'default_service';
+       const templateID = 'template_dcq3tea';
+    
+       emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Enviar';
+          alert(' Msj Enviado!');
+
+          
+        }, (err) => {
+          btn.value = 'Enviar';
+          alert(JSON.stringify(err));
+        });
+    });
 
 

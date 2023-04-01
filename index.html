@@ -271,16 +271,18 @@
   <div class="contenedor-form">
     <form action="" id="formulario-contacto">
       <div class="fila mitad">
-        <input type="text" placeholder="Nombre" id="nombre" class="input-mitad" name="name">
+        <input type="text" placeholder="Nombre" id="nombre" class="input-mitad" name="name" >
         <input type="email" placeholder="Mail" id="correo" class="input-mitad" name="email">
       </div>
       <div class="fila">
-        <input type="text" placeholder="Asunto" id="asunto" class="input-full" name="last">
+        <input type="text" placeholder="Asunto" id="asunto" class="input-full" name="last" >
       </div>
       <div class="fila">
-        <textarea cols="30" rows="10" placeholder="Mensaje" id="mensaje" class="input-full"></textarea name="message">
+        <textarea cols="30" rows="10" placeholder="Mensaje" id="mensaje" class="input-full" name="message"></textarea >
       </div>
-      <input type="submit" value="Enviar" class="btn-enviar">
+           solo activa las alert --------><input type="submit" id="button" value="Enviar" class="btn-enviar" >
+        <input type="submit" id="button" value="Enviar" class="btn-enviar" > 
+ 
     </form>
   </div>
 </section>
@@ -297,6 +299,10 @@
 </footer>
 
 <script src="script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript"> emailjs.init('eGu_7UkQqFvYIkPo7') </script>
+
+
 
 </body>
 
