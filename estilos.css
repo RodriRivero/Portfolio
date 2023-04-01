@@ -516,39 +516,47 @@ text-align: center;
 }
 
 /* ************************************************* */
-.alerta {
+.alert {
     position: fixed;
-    bottom: 300px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
-    color: white;
     font-weight: bold;
-    z-index: 9999;
-    animation: mostrar-alerta 0.5s ease-in-out;
+    animation: slideIn 0.5s ease-in-out forwards, fadeOut 0.5s 2.5s ease-in-out forwards;
   }
   
-  @keyframes mostrar-alerta {
-    0% {
-      transform: translateX(-50%) translateY(100%);
+  .alert--success {
+    background-color: #77bd78;
+    color: #fff;
+    border-radius: 20px;
+  }
+  
+  .alert--error {
+    background-color: #dc848d;
+    color: #f0ecec;
+    border-radius: 20px;
+  }
+  
+  @keyframes slideIn {
+    from {
+      bottom: -50px;
     }
-    100% {
-      transform: translateX(-50%) translateY(0);
+    to {
+      bottom: 400px;
     }
   }
   
-  
-  .alerta-exito {
-    background-color: #7abd7c;
-    border-radius: 15px;
+  @keyframes fadeOut {
+    from {
+      opacity: 3;
+    }
+    to {
+      opacity: 0;
+    }
   }
   
-  .alerta-error {
-    background-color: #e6817a;
-    border-radius: 15px;
-  }
-
 
 footer{
     background-color:  #000;
@@ -671,7 +679,7 @@ footer a {
         display: block;
     }
     #portfolio .fila .proyecto {
-        margin: 50px auto;
+        margin: 10px auto;
     }
     #portfolio .fila .proyecto1 {
         margin: 10px auto;
@@ -695,37 +703,44 @@ footer a {
         width: 100%;
         margin-bottom: 15px;
     }
-    .alerta{
+    .alert {
         position: fixed;
-        bottom:400px;
+        bottom: -50px;
         left: 50%;
         transform: translateX(-50%);
-        padding: 10px 20px;
+        padding: 10px;
         border-radius: 5px;
-        color: white;
         font-weight: bold;
-        z-index: 9999;
-        animation: mostrar-alerta 0.8s ease-in-out;
+        animation: slideIn 0.5s ease-in-out forwards, fadeOut 0.5s 2.5s ease-in-out forwards;
       }
       
-      @keyframes mostrar-alerta {
-        0% {
-          transform: translateX(-50%) translateY(100%);
+      .alert--success {
+        background-color: #77bd78;
+        color: #fff;
+        border-radius: 20px;
+      }
+      
+      .alert--error {
+        background-color: #dc848d;
+        color: #f0ecec;
+        border-radius: 20px;
+        width: 335px;
+      }
+      
+      @keyframes slideIn {
+        from {
+          bottom: -50px;
         }
-        100% {
-          transform: translateX(-50%) translateY(0);
+        to {
+          bottom: 400px;
         }
       }
       
-      
-      .alerta-exito {
-        background-color: #7abd7c;
-        border-radius: 15px;
+      @keyframes fadeOut {
+        from {
+          opacity: 3;
+        }
+        to {
+          opacity: 0;
+        }
       }
-      
-      .alerta-error {
-        background-color: #e6817a;
-        border-radius: 15px;
-        text-align: center;
-      }
-}

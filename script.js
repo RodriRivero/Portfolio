@@ -40,83 +40,64 @@ function efectoHabilidades() {
 
 }
 
-
-
-
-
-
-
-
-
-/*const form = document.querySelector('#formulario-contacto');
-const nombre = document.querySelector('#nombre');
-const correo = document.querySelector('#correo');
-const asunto = document.querySelector('#asunto');
-const mensaje = document.querySelector('#mensaje');
-const btnEnviar = document.querySelector('.btn-enviar');
-
-// Agregar listener al botón de enviar
-btnEnviar.addEventListener('click', enviarFormulario);
-
-// Función para enviar el formulario
-function enviarFormulario(event) {
-  event.preventDefault();
-  
-  // Verificar que todos los campos estén llenos
-  if (nombre.value === '' || correo.value === '' || asunto.value === '' || mensaje.value === '') {
-    mostrarAlerta('Llenar todos los campos por favor', 'error');
-    return;
-  }
-
-  // Mostrar mensaje de éxito
-  mostrarAlerta('Mensaje enviado', 'exito');
-
-  // Limpiar campos del formulario después de 3 segundos
-  setTimeout(() => {
-    form.reset();
-  }, 3000);
-}
-
-// Función para mostrar alertas
-function mostrarAlerta(mensaje, tipo) {
-  const alerta = document.createElement('div');
-  alerta.textContent = mensaje;
-  alerta.classList.add('alerta', `alerta-${tipo}`);
-
-  // Insertar alerta en el DOM
-  form.insertBefore(alerta, form.lastElementChild);
-
-  // Ocultar alerta después de 3 segundos
-  setTimeout(() => {
-    alerta.remove();
-  }, 3000);
-}*/
-
-
-
-
 const btn = document.getElementById('button');
 
-    document.getElementById('formulario-contacto')
-     .addEventListener('submit', function(event) {
-       event.preventDefault();
-       
-    
-       btn.value = 'Enviando...';
-    
-       const serviceID = 'default_service';
-       const templateID = 'template_dcq3tea';
-    
-       emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-          btn.value = 'Enviar';
-          alert(' Msj Enviado!');
+document.getElementById('formulario-contacto').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Validar campos requeridos
+  const nombreInput = document.getElementById('nombre');
+  const emailInput = document.getElementById('email');
+  const mensajeInput = document.getElementById('mensaje');
+  
+  console.log(emailInput); // Verificar si el elemento "email" se está obteniendo correctamente
+  
+  if (!nombreInput.value || !emailInput.value || !mensajeInput.value) {
+    // Mostrar alerta de error
+    const errorAlert = document.createElement('div');
+    errorAlert.classList.add('alert', 'alert--error');
+    errorAlert.textContent = 'Por favor, completa todos los campos.';
+    document.getElementById('formulario-contacto').appendChild(errorAlert);
 
-          
-        }, (err) => {
+    // Retrasar el envío del formulario
+    setTimeout(() => {
+      btn.value = 'Enviar';
+    },3000);
+  } else {
+    btn.value = 'Enviando...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_dcq3tea';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+
+
+        // Retrasar el reset del formulario
+        setTimeout(() => {
           btn.value = 'Enviar';
-          alert(JSON.stringify(err));
-        });
-    });
+          document.getElementById('formulario-contacto').reset();
+        }, );
+                // Mostrar alerta de éxito
+                const successAlert = document.createElement('div');
+                successAlert.classList.add('alert', 'alert--success');
+                successAlert.textContent = 'Mensaje enviado!';
+                document.getElementById('formulario-contacto').appendChild(successAlert);
+      }, (err) => {
+        // Mostrar alerta de error
+        const errorAlert = document.createElement('div');
+        errorAlert.classList.add('alert', 'alert--error');
+        errorAlert.textContent = JSON.stringify(err);
+        document.getElementById('formulario-contacto').appendChild(errorAlert);
+
+        // Retrasar el envío del formulario
+        setTimeout(() => {
+          btn.value = 'Enviar';
+        }, 3000);
+      });
+  }
+});
+
+
 
 

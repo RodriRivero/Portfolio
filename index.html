@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <title>Hola!</title>
 </head>
@@ -52,13 +52,13 @@
     </section>
     <!-- SOBRE MI -->
     <section id="sobremi">
-        <div class="contenedor-foto">
+        <div class="contenedor-foto" data-aos="fade-right" data-aos-delay="950" data-aos-duration="9000" data-aos-once="false">
             <img src="img/rodridev.jpg" alt="">
         </div>
-        <div class="sobremi">
+        <div class="sobremi" data-aos="fade-left" data-aos-delay="350" data-aos-duration="9000">
             <p class="titulo-seccion">Sobre Mi</p>
-            <h2>Hola, soy <span>Rodrigo Rivero</span></h2>
-            <h3>Desarrollador Web Jr</h3>
+            <div data-aos="fade-right"><h2>Hola, soy <span>Rodrigo Rivero</span></h2></div>
+            <h3>Desarrollador Web jr</h3>
             <p>Soy un desarrollador Front end,Estoy estudiando la Carrera Full Stack en Coderhouse ,curso la etapa final este año,aprediendo el Backend de la programacion.</p>
             <p>Dejo aqui abajo mi Cv para descargar.</p>
             <a download="" href="RodrigoRiveroDev.pdf"> Descargar CV</a>
@@ -69,7 +69,7 @@
     <section id="servicios">
         <h3 class="titulo-seccion"> CONOCIMIENTOS </h3>
         <div class="fila">
-            <div class="servicio">
+            <div class="servicio"  data-aos="fade-right" data-aos-duration="7000">
                 <span class="icono"><i class="fa-brands fa-html5 fa-beat fa-xl"></i></span>
                 <h4>HTML</h4>
                 <hr>
@@ -80,7 +80,7 @@
                 </ul>
                 <p>Fundamentos al Desarrollo Web, Prototipado y conceptos básicos de HTML, Primeros pasos con HTML, estructura semantica + Modeling,</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <span class="icono"><i class="fa-brands fa-css3-alt fa-beat fa-xl"></i></span>
                 <h4>CSS</h4>
                 <hr>
@@ -91,7 +91,7 @@
                 </ul>
                 <p>CSS + Box Modeling ,Animaciones, Responsive Frameworks CSS +Bootstrap,Media queries +, Preprocesador, SASS I, SASS II.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-left">
                 <span class="icono"><i class="fa-brands fa-js fa-beat fa-xl"></i></span>
                 <h4>JS</h4>
                 <hr>
@@ -104,7 +104,7 @@
             </div>
         </div>
         <div class="fila">
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-right" data-aos-duration="7000">
                 <span class="icono"><i class="fa-brands fa-react fa-beat fa-xl"></i></span>
                 <h4>REACT JS</h4>
                 <hr>
@@ -115,7 +115,7 @@
                 </ul>
                 <p>Componentes, React Hooks - useState y useEffect, APIs, promises, asincronía y map, React router, eventos en React, Firebase, Firestore.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-duration="3000">
                 <span class="icono"><i class="fa-brands fa-square-github fa-beat fa-xl"></i></span>
                 <h4>GIT HUB</h4>
                 <hr>
@@ -126,7 +126,7 @@
                 </ul>
                 <p>Versionado local,Branching,Introducción a GitHub.GitHub ,colaborativo,Git Tools,Realizar contribuciones a proyectos.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-left">
                 <span class="icono"><i class="fa-brands fa-bootstrap fa-beat fa-lg"></i></span>
                 <h4>BOOSTRAP</h4>
                 <hr>
@@ -186,7 +186,7 @@
 <section id="portfolio">
     <h3 class="titulo-seccion">MIS PROYECTOS</h3>   
     <div class="fila">
-        <div class="proyecto1">
+        <div class="proyecto1" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <a href="https://rodrigoriverodev.github.io/Mi-Paisaje-Argentina/"><img src="img/mipaisaje.jpg" alt=""></a>
         <div class="info">
@@ -194,7 +194,7 @@
             <p>HTML&CSS</p>
         </div>
         </div>
-        <div class="proyecto2">
+        <div class="proyecto2" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <a href="https://rodrigoriverodev.github.io/Mil-formas-de-reir/"><img src="img/milformas.png" alt=""></a>
         <div class="info">
@@ -202,7 +202,7 @@
             <p>Html,Css,Javascript</p>
             </div>
         </div>
-        <div class="proyecto3">
+        <div class="proyecto3" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <a href="https://reacts22-2d3c7.firebaseapp.com/"><img src="img/ecommerce.png" alt=""></a>
         <div class="info">
@@ -212,7 +212,7 @@
         </div>
     </div>
     <div class="fila">
-        <div class="proyecto">
+        <div class="proyecto" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <img src="img/newproyect.jpg" alt="">
         <div class="info">
@@ -220,7 +220,7 @@
             <p>diseño Web</p>
         </div>
         </div>
-        <div class="proyecto">
+        <div class="proyecto" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <a href=""><img src="img/newproyect.jpg" alt=""></a>
         <div class="info">
@@ -228,7 +228,7 @@
             <p>diseño Web</p>
             </div>
         </div>
-        <div class="proyecto">
+        <div class="proyecto" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <img src="img/newproyect.jpg" alt="">
         <div class="info">
@@ -238,7 +238,7 @@
         </div>
     </div>
     <div class="fila">
-        <div class="proyecto">
+        <div class="proyecto" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <img src="img/newproyect.jpg" alt="">
         <div class="info">
@@ -246,7 +246,7 @@
             <p>diseño Web</p>
         </div>
         </div>
-        <div class="proyecto">
+        <div class="proyecto" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <img src="img/newproyect.jpg" alt="">
         <div class="info">
@@ -254,7 +254,7 @@
             <p>diseño Web</p>
             </div>
         </div>
-        <div class="proyecto">
+        <div class="proyecto" data-aos="zoom-in" data-aos-duration="2000">
             <div class="overlay"></div>
         <img src="img/newproyect.jpg" alt="">
         <div class="info">
@@ -272,7 +272,7 @@
     <form action="" id="formulario-contacto">
       <div class="fila mitad">
         <input type="text" placeholder="Nombre" id="nombre" class="input-mitad" name="name" >
-        <input type="email" placeholder="Mail" id="correo" class="input-mitad" name="email">
+        <input type="email" placeholder="Mail" id="email" class="input-mitad" name="email">
       </div>
       <div class="fila">
         <input type="text" placeholder="Asunto" id="asunto" class="input-full" name="last" >
@@ -296,11 +296,18 @@
     </div>
 </footer>
 
+<!-- SCRIPTS -->
+
 <script src="script.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript"> emailjs.init('eGu_7UkQqFvYIkPo7') </script>
 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init(
+        
+    );
+  </script>
 
 </body>
 
