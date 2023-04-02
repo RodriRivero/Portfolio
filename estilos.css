@@ -680,15 +680,19 @@ footer a {
     }
     #portfolio .fila .proyecto {
         margin: 10px auto;
+        height: 200px;
     }
     #portfolio .fila .proyecto1 {
         margin: 10px auto;
+        height: 200px;
     }
     #portfolio .fila .proyecto2 {
         margin: 10px auto;
+        height: 200px;
     }
     #portfolio .fila .proyecto3 {
         margin: 10px auto;
+        height: 210px;
     }
     
     /* seccion CONTACTO */
