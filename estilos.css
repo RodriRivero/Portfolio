@@ -1,4 +1,4 @@
-/*Fuente utilizada*/
+/*Fuente utilizada************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 
@@ -391,7 +391,7 @@ text-align: center;
     position:relative;
     overflow: hidden;
 }
-
+/****************/
 #portfolio .fila .proyecto img {
     width: 100%;
     height: 100%;
